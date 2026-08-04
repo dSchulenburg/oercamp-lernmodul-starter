@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" role="img" aria-label="Logo">
+  <g stroke-linecap="round">
+    <circle cx="76.8" cy="107.8" r="13.8" fill="none" stroke="#1a1a1a" stroke-width="2.6"/>
+    <circle cx="76.8" cy="107.8" r="33.2" fill="none" stroke="#1a1a1a" stroke-width="2.6"/>
+    <circle cx="76.8" cy="107.8" r="55.9" fill="none" stroke="#1a1a1a" stroke-width="2.6"/>
+    <path d="M 135.86 152.97 A 78.70 78.70 0 1 1 165.96 108.34" fill="none" stroke="#1a1a1a" stroke-width="2.6"/>
+    <path d="M 110.50 108.40 L 165.96 108.34" fill="none" stroke="#e67e22" stroke-width="2.6"/>
+    <path d="M 110.50 108.40 L 135.86 152.97" fill="none" stroke="#e67e22" stroke-width="2.6"/>
+    <circle cx="110.5" cy="108.4" r="4.8" fill="#e67e22" stroke="#1a1a1a" stroke-width="1.4"/>
+  </g>
+</svg>

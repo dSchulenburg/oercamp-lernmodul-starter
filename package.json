@@ -1,0 +1,25 @@
+{
+  "name": "oercamp-lernmodul-starter",
+  "private": false,
+  "version": "1.0.0",
+  "description": "Starter-Vorlage: interaktives Mini-Lernmodul (Vite + React + Tailwind). Aus einem Lehrplan-Auszug ein mehrsprachiges Selbstcheck-Modul bauen. OERcamp Profi-Spur. Inhalte CC BY 4.0, Code MIT.",
+  "homepage": "https://lernmodule.dirk-schulenburg.net/oercamp/",
+  "license": "MIT",
+  "author": "Dirk Schulenburg (https://dirk-schulenburg.net)",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "@tailwindcss/vite": "^4.0.0",
+    "tailwindcss": "^4.0.0",
+    "vite": "^6.0.7"
+  }
+}

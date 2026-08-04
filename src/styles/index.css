@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+/* Systemfont-Stack: keine externen Fonts, laeuft sofort offline. */
+:root {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+}
