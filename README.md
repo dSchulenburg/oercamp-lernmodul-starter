@@ -23,8 +23,22 @@ nur bist du hier im Code und kannst es beliebig erweitern und selbst hosten.
 
 ## 2. Loslegen
 
+Dieses Repo ist eine GitHub-**Vorlage**. Der bequemste Weg: oben auf
+**„Use this template" → „Create a new repository"** klicken, dann hast du eine
+eigene Kopie unter deinem Account und `<DEIN-NAME>` unten ist dein
+GitHub-Benutzername:
+
 ```bash
-git clone <DEIN-FORK-ODER-DIESES-REPO>
+git clone https://github.com/<DEIN-NAME>/oercamp-lernmodul-starter.git
+cd oercamp-lernmodul-starter
+npm install
+npm run dev
+```
+
+Ohne GitHub-Account geht es auch direkt:
+
+```bash
+git clone https://github.com/dSchulenburg/oercamp-lernmodul-starter.git
 cd oercamp-lernmodul-starter
 npm install
 npm run dev
