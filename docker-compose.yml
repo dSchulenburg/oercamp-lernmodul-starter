@@ -1,0 +1,24 @@
+# Die Werkbank, bequeme Variante.
+#
+#   docker compose up
+#
+# Danach im Browser: http://localhost:5173
+# Beenden: Strg+C
+#
+# Der Ordner, in dem diese Datei liegt, ist dein Arbeitsordner. Was du darin
+# aenderst, siehst du sofort im Browser. Es ist derselbe Ordner.
+#
+# Ist Port 5173 schon belegt, aendere links die erste Zahl, z. B. "5174:5173",
+# und rufe dann http://localhost:5174 auf.
+services:
+  werkbank:
+    image: dadalama/oercamp-werkbank:1.0
+    # Nur noetig, wenn du das Image selbst bauen willst statt es zu ziehen.
+    # Dafuer brauchst du das Vorlagen-Repo mit dem Dockerfile:
+    # build: .
+    ports:
+      - "5173:5173"
+    volumes:
+      - .:/work
+    stdin_open: true
+    tty: true

@@ -1,0 +1,7 @@
+# Zeilenenden vereinheitlichen.
+#
+# Ohne das zeigt `git diff` auf Windows nach dem ersten Speichern die ganze
+# Datei als geaendert an, wenn der Editor Zeilenenden umstellt. Genau der
+# Effekt zerstoert den Nutzen der Sicherheitsleine: man will die eine Zeile
+# sehen, die man geaendert hat, nicht neunundsiebzig.
+* text=auto eol=lf

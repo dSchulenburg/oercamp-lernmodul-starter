@@ -2,7 +2,7 @@
   "name": "oercamp-lernmodul-starter",
   "private": false,
   "version": "1.0.0",
-  "description": "Starter-Vorlage: interaktives Mini-Lernmodul (Vite + React + Tailwind). Aus einem Lehrplan-Auszug ein mehrsprachiges Selbstcheck-Modul bauen. OERcamp Profi-Spur. Inhalte CC BY 4.0, Code MIT.",
+  "description": "Starter-Vorlage: interaktives Mini-Lernmodul (Vite + React + Tailwind). Aus einem Lehrplan-Auszug ein mehrsprachiges Selbstcheck-Modul bauen. Material zum OERcamp-Workshop. Inhalte CC BY 4.0, Code MIT.",
   "homepage": "https://lernmodule.dirk-schulenburg.net/oercamp/",
   "license": "MIT",
   "author": "Dirk Schulenburg (https://dirk-schulenburg.net)",

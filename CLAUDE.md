@@ -9,6 +9,22 @@ konsistent.
 Ein interaktives Mini-Lernmodul: wenige Aufgaben mit Selbstcheck, Sofort-Feedback
 und Punktestand. Gebaut aus einem Lehrplan- oder Lernfeld-Auszug.
 
+## Zwei Umgebungen, ein Projekt
+
+Dieses Modul laeuft auf zwei Wegen. Pruefe zuerst, welcher hier gilt, sonst
+schlaegst du Befehle vor, die auf diesem Rechner gar nicht funktionieren.
+
+- **Werkbank (Container).** Kennzeichen: eine `docker-compose.yml` liegt daneben,
+  aber es gibt kein `node_modules` im Projektordner. Auf dem Rechner ist Node
+  wahrscheinlich gar nicht installiert. Starten mit `docker compose up`,
+  bauen mit `docker compose run --rm werkbank npm run build`. **Niemals
+  `npm install` vorschlagen**, die Pakete stecken im Image.
+- **Klassisch.** Node ist installiert, `node_modules` liegt im Projektordner.
+  Dann gelten `npm install`, `npm run dev`, `npm run build` wie ueblich.
+
+In beiden Faellen aenderst du nur Dateien. Der Server merkt das von selbst und
+laedt neu, du musst ihn nicht neu starten.
+
 ## Stack (bewusst schlank)
 
 Vite + React (JS/JSX) + Tailwind v4. **Keine neuen Abhaengigkeiten ohne Not.**
