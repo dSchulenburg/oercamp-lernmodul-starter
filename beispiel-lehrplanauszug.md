@@ -21,8 +21,8 @@ oder ein paar Zeilen genuegen).
 
 ## So nutzt du diesen Auszug
 
-1. Kopiere den Auszug oben in **Prompt 1** (siehe README, Abschnitt 3) an die
-   Stelle `[DEIN AUSZUG]`.
+1. Kopiere den Auszug oben in **Prompt 1** (siehe README, "Dein eigenes Modul
+   bauen") an die Stelle `[DEIN AUSZUG]`.
 2. Als Zielgruppe gibst du "Erwachsene, DaZ A2" an.
 3. Arbeite Prompt 1 bis 3 der Reihe nach ab.
 

@@ -14,7 +14,7 @@ export default function App() {
             <span className="font-semibold">Mini-Lernmodul</span>
           </span>
 
-          {/* Sprach-Umschalter: spiegelt Stufe 3 der Rezeptkarte */}
+          {/* Sprach-Umschalter: das Ergebnis von Prompt 3 aus der README */}
           <div className="flex gap-1" role="group" aria-label="Sprache / Language">
             {SPRACHEN.map((code) => (
               <button

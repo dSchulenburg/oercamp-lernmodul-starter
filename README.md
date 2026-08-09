@@ -19,10 +19,10 @@ Am Ende hast du ein Modul, das du beliebig erweitern und selbst hosten kannst.
 
 **Weg A, die Werkbank (nichts installieren).** Du brauchst nur Docker. Der
 Container bringt Node, npm und alle Pakete mit, legt die Vorlage in deinen
-Ordner und startet den Entwicklungsserver. Siehe Abschnitt 2.
+Ordner und startet den Entwicklungsserver. Siehe Abschnitt „Weg A".
 
 **Weg B, klassisch.** Du hast Node ≥ 20 und git auf dem Rechner und arbeitest
-direkt damit. Siehe Abschnitt 3.
+direkt damit. Siehe Abschnitt „Weg B".
 
 Beide Wege fuehren zum selben Ergebnis. Ein KI-Coding-Assistent (z. B. **Claude
 Code**) hilft in beiden Faellen, ist aber keine Bedingung.
