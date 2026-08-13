@@ -25,7 +25,7 @@ LABEL org.opencontainers.image.title="OERcamp Lernmodul-Werkbank" \
 # ist "Aenderung ansehen, Aenderung verwerfen". Ohne Git waere das nur eine
 # Behauptung. `safe.directory` verhindert die Eigentuemer-Warnung, wenn der
 # Ordner vom Host kommt.
-RUN apk add --no-cache git \
+RUN apk add --no-cache git tini \
  && git config --global --add safe.directory '*'
 
 WORKDIR /
@@ -52,4 +52,22 @@ ENV PATH="/node_modules/.bin:${PATH}" \
 
 WORKDIR /work
 EXPOSE 5173
+
+# tini als PID 1, damit Strg+C den Container wirklich beendet.
+#
+# Ohne diese Zeile ist Node PID 1 (start.sh endet mit `exec vite`), und PID 1
+# bekommt unter Linux KEINE Standard-Signalbehandlung: Signale ohne eigenen
+# Handler werden verworfen, statt den Prozess zu beenden. Vite installiert
+# einen SIGTERM-Handler, deshalb wirkte `docker stop` in einer Sekunde -
+# SIGINT dagegen wurde ersatzlos geschluckt. Am 13.08.2026 gemessen: Nach
+# Strg+C kam die Eingabeaufforderung zurueck, der Container lief weiter und
+# hielt Port 5173, sodass der zweite Start an "port is already allocated"
+# scheiterte. Es sah sauber aus und war es nicht - die schlimmste Sorte Fehler
+# fuer einen Raum mit dreissig Leuten. Das Banner in start.sh nennt Strg+C als
+# den Weg zum Beenden; mit tini stimmt das auch.
+#
+# tini laeuft als PID 1, faengt die Signale ab und reicht sie an Node weiter -
+# das ist dann nicht mehr PID 1 und stirbt am Standardverhalten. Unsichtbar im
+# Startbefehl, anders als `docker run --init`.
+ENTRYPOINT ["/sbin/tini", "--"]
 CMD ["werkbank-start"]

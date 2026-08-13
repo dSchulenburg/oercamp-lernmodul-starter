@@ -47,6 +47,12 @@ if [ ! -d "$ZIEL/.git" ] && [ -f "$ZIEL/package.json" ]; then
   # Sonst schreibt Git bei jedem Diff eine Warnung ueber Zeilenenden ueber die
   # eigentliche Ausgabe. Geregelt ist die Sache schon per .gitattributes.
   git -C "$ZIEL" config core.safecrlf false
+  # Dieses Repo wird von zwei Seiten gelesen: hier drin von Linux, draussen vom
+  # Host. Linux legt die Dateien mit 100755 an, NTFS kennt kein Exec-Bit und
+  # meldet 100644 zurueck - ohne diese Zeile zeigt `git diff` auf dem Host jede
+  # einzelne Vorlagendatei als "old mode / new mode", bevor die eine echte
+  # Aenderung kommt. Gemessen am 13.08.2026: 72 Zeilen Rauschen statt 13.
+  git -C "$ZIEL" config core.fileMode false
   git -C "$ZIEL" add -A
   git -C "$ZIEL" commit -q -m "Vorlage: Stand beim ersten Start"
   echo "Werkbank: Sicherheitsleine gelegt (git). Zurueck geht es mit: git checkout ."
